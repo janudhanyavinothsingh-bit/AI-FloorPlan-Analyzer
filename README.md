@@ -31,20 +31,24 @@ AI Floor Plan Analyzer is a computer vision–based web app that automatically d
 ##  System Workflow
 
 1️⃣ Image Preprocessing
+
 	•	Resize images for performance
 	•	Color space conversion (BGR → RGB → LAB)
 	•	Histogram equalization
 
 2️⃣ Room Detection
+
 	•	Color quantization & segmentation
 	•	Mask generation & morphological operations
 	•	Contour detection for room areas
 
 3️⃣ Feature Extraction
+
 	•	Area, Perimeter, Aspect ratio, Circularity
 
 4️⃣ Room Classification
-    • Very Large → Living Room
+
+    •   Very Large → Living Room
 	•	Large → Hall
 	•	Medium → Bedroom
 	•	Small → Kitchen
@@ -88,4 +92,3 @@ Janu Dhanya Vinoth Singh | B.Com ( CA ) – Data Science with AI
 
 ## Acknowledgments
 Open-source libraries, Streamlit community, OpenCV
-.
