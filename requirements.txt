@@ -12,9 +12,3 @@ opencv-python-headless==4.7.0.72
 
 # Streamlit
 streamlit==1.25.0
-
-# Optional AI/ML packages (only if you really need them)
-# torch and transformers often fail on Streamlit Cloud
-# torch==2.11.0
-# transformers==5.4.0
-# pytesseract==0.3.13s
