@@ -88,7 +88,4 @@ Janu Dhanya Vinoth Singh | B.Com ( CA ) – Data Science with AI
 
 ## Acknowledgments
 Open-source libraries, Streamlit community, OpenCV
-
-
-## Internship Note
-Professional internship project demonstrating applied computer vision and end-to-end development.
+.
