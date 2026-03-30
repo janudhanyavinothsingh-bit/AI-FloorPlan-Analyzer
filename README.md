@@ -3,6 +3,7 @@ AI Floor Plan Analyzer
 Live Demo: https://ai-floorplan-analyzer-wzzlz2o4pd3gc22vmcgcjn.streamlit.app/
 
 Last Updated: March 2026
+
 Author: Janu Dhanya Vinoth Singh
 
 Overview
