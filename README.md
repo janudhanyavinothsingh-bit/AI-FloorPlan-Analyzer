@@ -4,7 +4,6 @@ Professional Internship Project | March 2026
 🔗 Live Demo:
 https://ai-floorplan-analyzer-wzzlz2o4pd3gc22vmcgcjn.streamlit.app/
 
-⸻
 
 📌 Project Overview
 AI Floor Plan Analyzer is a computer vision–based web app that automatically detects and classifies rooms from floor plan images.
@@ -14,14 +13,12 @@ AI Floor Plan Analyzer is a computer vision–based web app that automatically d
 
 Built using Python, OpenCV, and Streamlit for an intuitive, real-time interface.
 
-⸻
 
 🎯 Objective
 	•	Automate floor plan interpretation
 	•	Reduce manual layout analysis
 	•	Apply computer vision to real-world problems
 
-⸻
 
 🚀 Key Features
 	•	Upload floor plan images (PNG, JPG, JPEG)
@@ -32,7 +29,6 @@ Built using Python, OpenCV, and Streamlit for an intuitive, real-time interface.
 	•	Export results (CSV, Image, TXT)
 	•	Analysis history tracking
 
-⸻
 
 ⚙️ System Workflow
 
@@ -50,21 +46,28 @@ Built using Python, OpenCV, and Streamlit for an intuitive, real-time interface.
 	•	Area, Perimeter, Aspect ratio, Circularity
 
 4️⃣ Room Classification
-•	Very Large → Living Room
+    • Very Large → Living Room
 	•	Large → Hall
 	•	Medium → Bedroom
 	•	Small → Kitchen
 	•	Smaller → Bathroom
 	•	Minimal → Closet
+	
 🖥 Live Demo:
 https://ai-floorplan-analyzer-wzzlz2o4pd3gc22vmcgcjn.streamlit.app/
 
-⸻
+ 📸 Screenshots 
+<img width="1920" height="912" alt="Screenshot (196)" src="https://github.com/user-attachments/assets/c89f8ea9-8eda-461e-9e88-2fcc3e329cdd" />
+<img width="1920" height="919" alt="Screenshot (197)" src="https://github.com/user-attachments/assets/9c1ab646-d16d-4e1d-ae07-f009d42288cb" />
+<img width="1920" height="921" alt="Screenshot (198)" src="https://github.com/user-attachments/assets/4ba21a65-c3f2-4a0f-9da0-029f320b034d" />
+<img width="1920" height="911" alt="Screenshot (199)" src="https://github.com/user-attachments/assets/86fbc16d-a9e5-46f2-856a-dbafbda6b513" />
+<img width="1920" height="925" alt="Screenshot (200)" src="https://github.com/user-attachments/assets/0433c42b-aafa-41f7-98d0-ecb763010e6c" />
+
+
 
 🛠 Tech Stack
 Python | Streamlit | OpenCV | NumPy | Pandas | Matplotlib | Altair | Pillow | Scikit-learn
 
-⸻
 
 📦 Installation Guide
 	1.	Clone repo:
@@ -86,11 +89,9 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-	4.	Run app:
+4. Run app
  
 streamlit run app.py
-
-⸻
 
 📊 Output
 	•	Annotated floor plan image
@@ -98,7 +99,6 @@ streamlit run app.py
 	•	Statistical summary
 	•	Downloadable reports (CSV / Image / TXT)
 
-⸻
 
 🔮 Future Enhancements
 	•	Deep Learning–based room segmentation
@@ -108,17 +108,14 @@ streamlit run app.py
 	•	Real-world dimension estimation
 	•	Cloud API deployment
 
-⸻
 
 👨‍💻 Author
 Janu Dhanya Vinoth Singh | B.Tech – AI & Data Science
 
-⸻
 
 🙏 Acknowledgments
 Open-source libraries, Streamlit community, OpenCV
 
-⸻
 
 ⭐ Internship Note
 Demonstrates applied computer vision, real-world problem solving, end-to-end development, cloud deployment.
