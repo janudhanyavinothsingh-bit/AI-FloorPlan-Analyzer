@@ -54,7 +54,7 @@ AI Floor Plan Analyzer is a computer vision–based web app that automatically d
 ##  Live Demo
 Try it instantly: https://ai-floorplan-analyzer-wzzlz2o4pd3gc22vmcgcjn.streamlit.app/
 
-## 📸 Screenshots 
+##  Screenshots 
 <img width="1920" height="912" alt="Screenshot (196)" src="https://github.com/user-attachments/assets/c89f8ea9-8eda-461e-9e88-2fcc3e329cdd" />
 <img width="1920" height="919" alt="Screenshot (197)" src="https://github.com/user-attachments/assets/9c1ab646-d16d-4e1d-ae07-f009d42288cb" />
 <img width="1920" height="921" alt="Screenshot (198)" src="https://github.com/user-attachments/assets/4ba21a65-c3f2-4a0f-9da0-029f320b034d" />
