@@ -7,24 +7,26 @@
 import streamlit as st
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 from collections import Counter
 
 # ==========================================
-# 📌 Preprocessing
+# Preprocessing
 # ==========================================
 def preprocess_image(file):
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
 
-    img = cv2.resize(img, (800, 800))
+    # Resize while keeping aspect ratio
+    max_dim = 800
+    h, w = img.shape[:2]
+    scale = max_dim / max(h, w)
+    img = cv2.resize(img, (int(w * scale), int(h * scale)))
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     return img_rgb
 
-
 # ==========================================
-# 📌 Classification
+# Classification
 # ==========================================
 def classify_room(area):
     if area is None or area <= 0:
@@ -38,9 +40,8 @@ def classify_room(area):
     else:
         return "Bathroom"
 
-
 # ==========================================
-# 📌 Detection
+# Detection
 # ==========================================
 def detect_rooms(img_rgb):
     pixels = img_rgb.reshape(-1, 3)
@@ -57,7 +58,6 @@ def detect_rooms(img_rgb):
 
             if area > 1500:
                 x, y, w, h = cv2.boundingRect(cnt)
-
                 rooms.append({
                     "x": x,
                     "y": y,
@@ -69,9 +69,8 @@ def detect_rooms(img_rgb):
 
     return rooms
 
-
 # ==========================================
-# 📌 Description Generator
+# Description Generator
 # ==========================================
 def generate_description(rooms):
     types = [room["type"] for room in rooms]
@@ -83,16 +82,14 @@ def generate_description(rooms):
 
     return "This floor plan contains " + ", ".join(parts)
 
-
 # ==========================================
-# 📌 Streamlit UI
+# Streamlit UI
 # ==========================================
-st.title("🏠 AI Floor Plan Analyzer")
+st.title("AI Floor Plan Analyzer")
 
 uploaded_file = st.file_uploader("Upload Floor Plan Image", type=["png", "jpg", "jpeg"])
 
 if uploaded_file is not None:
-
     # Preprocess
     img_rgb = preprocess_image(uploaded_file)
 
@@ -104,15 +101,16 @@ if uploaded_file is not None:
         x, y, w, h = room["x"], room["y"], room["w"], room["h"]
         label = room["type"]
 
-        cv2.rectangle(img_rgb, (x, y), (x+w, y+h), (255, 0, 0), 2)
-        cv2.putText(img_rgb, label, (x, y-10),
+        cv2.rectangle(img_rgb, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        y_text = max(y - 10, 10)
+        cv2.putText(img_rgb, label, (x, y_text),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
 
     # Show image
     st.image(img_rgb, caption="Processed Floor Plan", use_column_width=True)
 
     # Show results
-    st.subheader(f"🧾 Total Rooms Detected: {len(rooms)}")
+    st.subheader(f"Total Rooms Detected: {len(rooms)}")
 
     # Description
     description = generate_description(rooms)
