@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+opencv-python
+pillow
+scikit-learn
+streamlit
+
+# Optional (advanced features)
+torch
+transformers
+pytesseract
